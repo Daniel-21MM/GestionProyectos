@@ -93,7 +93,16 @@
   color: #ffff;
   font-size: 1.2rem;
 }
-
+.contenedor-form button:hover{
+ cursor: pointer;
+ background-color: #dc6d45;
+ transition: 0.5s all;
+}
+.contenedor-form a:hover{
+ cursor: pointer;
+ background-color: #dc6d45;
+ transition: 0.5s all;
+}
 
 
 
