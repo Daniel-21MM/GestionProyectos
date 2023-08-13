@@ -1,11 +1,105 @@
-body{
-  font-family:verdana;  
-  background-color: #f5f5f5;
-  margin: auto;
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Poppins&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family:"Oswald",sans-serif;
+}
+:root{
+  --fondoinput:#FB5B21;
+  --paddinginput: 0.8rem;
+  --borderedonde: 10px;
+}
+.contenedor{
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows:1fr 1fr;
+  grid-template-areas: 
+  "img img cont"
+  "img img cont"
+  "img img cont";
+}
+.contenedor-img{
+  grid-area: img;
+  background-image: url(https://lh3.googleusercontent.com/3hjBkuVOu-sn1M8Mi0vP888jN5rFAosRSGxXcPlzg1mTQSSba7HJkxarB2GyAk-nCFLR1TVhB4pA76dbaH9yCb2PAqBIk8FLYyTfjwA1);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.9;
+  width: 100%;
+  height: 100%;
+}
+.contenedor-cont{
+  grid-area: cont;
+  background-color:#222429;
+}
+.contenedor-form{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contenedor-form form{
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+}
+.contenedor-form form>img{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+.contenedor form>h1{
+ color: #ffff;
+  font-size: 4em;
+}
+.contenedor-form form>input{
+  width: 70%;
+  height: 3em;
+  font-size: 1.2rem;
+  padding: 0px 0px 0px 2em ;
+  border: none;
+  border: 1px solid slategray;
+  border-radius: 10px;
+  color:slategray;
+}
+.contenedor-form input:focus{
+  outline-color:var(--fondoinput);
+}
+.contenedor-form a{
+  width: 70%;
+  padding: var(--paddinginput);
   text-align: center;
+  border: none;
+  border-radius:var(--borderedonde);
+  text-decoration: none;
+  background-color: var(--fondoinput);
+  color: #ffff;
+  font-size: 1.2rem;
+}
+.contenedor-form button{
+  padding: var(--paddinginput);
+  border-radius:var(--borderedonde) ;
+  background-color: var(--fondoinput);
+  border: none;
+  width: 70%;
+  color: #ffff;
+  font-size: 1.2rem;
 }
 
-/* Login form */
+
+
+
+
+
+/* Login form 
 .login-form, .contenedor {
   width: 300px;
   margin: 0 auto;
@@ -25,7 +119,7 @@ body{
   box-sizing:border-box;
 }
 
-/* Estilos boton LOGIN*/
+/* Estilos boton LOGIN
 .btn-login{
   width: 100%;
   padding: 15px;
@@ -46,7 +140,7 @@ body{
   box-shadow:0 0 0 3px rgba(121,82,179,0.25)
 }
 
-/* Estilos boton REGISTER*/
+/* Estilos boton REGISTER
 .btn-register{
   width: 100%;
   padding: 15px;
@@ -58,7 +152,7 @@ body{
   font-size: large;
   color: #ffffff;
   margin-top: 20px;
-  /* Para dar la apariencia de un boton */
+  /* Para dar la apariencia de un boton 
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
@@ -76,7 +170,7 @@ body{
 
 
 
-/* Estilos de link para ir a LOGIN*/
+/* Estilos de link para ir a LOGIN
 .a-login:link, .a-login:visited {
   background-color: white;
   color: black;
@@ -92,7 +186,7 @@ body{
   color: white;
 }
 
-/* Estilos de link para realizar el LOGOUT*/
+/* Estilos de link para realizar el LOGOUT
 .a-logout:link, .a-logout:visited {
   background-color: white;
   color: black;
@@ -108,7 +202,7 @@ body{
   color: white;
 }
 
-/* Estilos boton CANCELAR*/
+/* Estilos boton CANCELAR
 .btn-cancel{
   width: 50%;
   padding: 15px;
@@ -121,7 +215,7 @@ body{
   color: #ffffff;
   text-align: center;
   margin-top: 20px;
-  /* Para dar la apariencia de un boton */
+  /* Para dar la apariencia de un boton 
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
@@ -137,7 +231,7 @@ body{
   box-shadow:0 0 0 3px #6B7280;
 }
 
-/* Estilos boton GUARDAR*/
+/* Estilos boton GUARDAR
 .btn-save{
   width: 50%;
   padding: 15px;
@@ -149,7 +243,7 @@ body{
   font-size:medium;
   color: #ffffff;
   margin-top: 20px;
-  /* Para dar la apariencia de un boton */
+  /* Para dar la apariencia de un boton 
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
@@ -164,7 +258,7 @@ body{
   box-shadow:0 0 0 3px #1E3A8A;
 }
 
-/* form User Registration */
+/* form User Registration 
 .register-form{
   width: 400px;
   margin: 0 auto;
@@ -190,7 +284,7 @@ body{
   box-sizing:border-box;
 }
 
-/* Estilos para el select dropdown */
+/* Estilos para el select dropdown 
 .select-css {
   display: block;
   font-size: 16px;  
