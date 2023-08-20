@@ -106,7 +106,7 @@ app.post('/auth', async (req, res)=> {
 			res.end();
 		});
 	} else {	
-		res.send('Please enter user and Password!');
+		res.send('Por favor, Ingrese Sus Datos!');
 		res.end();
 	}
 });
