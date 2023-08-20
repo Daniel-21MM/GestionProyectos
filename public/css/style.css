@@ -62,6 +62,7 @@
  color: #ffff;
   font-size: 4em;
 }
+
 .contenedor-form form>input{
   width: 70%;
   height: 3em;
@@ -80,6 +81,9 @@
 .contenedor-form input:focus{
   outline-color:var(--fondoinput);
 }
+
+
+
 .contenedor-form a{
   width: 70%;
   padding: var(--paddinginput);
