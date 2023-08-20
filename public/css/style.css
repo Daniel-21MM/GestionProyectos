@@ -1,27 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Poppins&display=swap');
-*{
+
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family:"Oswald",sans-serif;
+  font-family: "Oswald", sans-serif;
 }
-:root{
-  --fondoinput:#FB5B21;
-  --paddinginput: 0.8rem;
+
+:root {
+  --fondoinput: #FB5B21;
+  --paddinginput: 0.6rem;
   --borderedonde: 10px;
 }
-.contenedor{
+
+.contenedor {
   width: 100vw;
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows:1fr 1fr;
-  grid-template-areas: 
-  "cont img img"
-  "cont img img"
-  "cont img img";
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "cont img img"
+    "cont img img"
+    "cont img img";
 }
-.contenedor-img{
+
+.contenedor-img {
   grid-area: img;
   background-image: url('/img/fondo_login.jpg');
   background-position: center;
@@ -31,12 +35,14 @@
   width: 100%;
   height: 100%;
 }
+
 .contenedor-cont {
   grid-area: cont;
   background-color: #222429;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
 }
-.contenedor-form{
+
+.contenedor-form {
   width: 100%;
   height: 100%;
   display: flex;
@@ -44,7 +50,8 @@
   justify-content: center;
   align-items: center;
 }
-.contenedor-form form{
+
+.contenedor-form form {
   width: 100%;
   height: auto;
   display: flex;
@@ -52,92 +59,160 @@
   flex-direction: column;
   gap: 40px;
 }
-.contenedor-form form>img{
+
+.contenedor-form form>img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  box-shadow: 4px 4px 15px 4px rgba(251, 91,33, 0.9);
+  box-shadow: 4px 4px 15px 4px rgba(251, 91, 33, 0.9);
 }
-.contenedor form>h1{
- color: #ffff;
+
+.contenedor form>h1 {
+  color: #ffff;
   font-size: 4em;
 }
 
-.contenedor-form form>input{
-  width: 70%;
+.input-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-container input {
+  width: 65%;
   height: 3em;
   font-size: 1.2rem;
-  padding: 0px 0px 0px 2em ;
+  padding: 0px 0px 0px 0.8em;
   border: none;
-  border: 1px solid slategray;
-  border-radius: 10px;
-  color:slategray;
-}
-.contenedor-input{
-  width: 70%;
-
+  border-bottom: 1px solid white;
+  color: white;
+  background-color: transparent;
 }
 
-.contenedor-form input:focus{
-  outline-color:var(--fondoinput);
+.input-container input::placeholder {
+  color: white;
 }
 
+i {
+  color: white;
+}
 
+.contenedor-form input:focus {
+  outline: none;
+}
 
-.contenedor-form a{
-  width: 70%;
-  padding: var(--paddinginput);
+/* BUTOONS PRUEBA */
+
+button {
+  --c: #FB5B21;
+  /* the color*/
+
+  box-shadow: 0 0 0 .1em inset var(--c);
+  --_g: linear-gradient(var(--c) 0 0) no-repeat;
+  background:
+    var(--_g) calc(var(--_p, 0%) - 100%) 0%,
+    var(--_g) calc(200% - var(--_p, 0%)) 0%,
+    var(--_g) calc(var(--_p, 0%) - 100%) 100%,
+    var(--_g) calc(200% - var(--_p, 0%)) 100%;
+  background-size: 50.5% calc(var(--_p, 0%)/2 + .5%);
+  outline-offset: .1em;
+  transition: background-size .4s, background-position 0s .4s;
+}
+
+button:hover {
+  --_p: 100%;
+  transition: background-position .4s, background-size 0s;
+}
+
+button:active {
+  box-shadow: 0 0 9e9q inset #0009;
+  background-color: var(--c);
+  color: #fff;
+}
+
+button {
+  width: 68%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding:var(--paddinginput); 
+  border: none;
+  color: white;
+  border-radius: var(--borderedonde);
+}
+/*===================*/
+a{
+  --c: #FB5B21;
+  /* the color*/
+
+  box-shadow: 0 0 0 .1em inset var(--c);
+  --_g: linear-gradient(var(--c) 0 0) no-repeat;
+  background:
+    var(--_g) calc(var(--_p, 0%) - 100%) 0%,
+    var(--_g) calc(200% - var(--_p, 0%)) 0%,
+    var(--_g) calc(var(--_p, 0%) - 100%) 100%,
+    var(--_g) calc(200% - var(--_p, 0%)) 100%;
+  background-size: 50.5% calc(var(--_p, 0%)/2 + .5%);
+  outline-offset: .1em;
+  transition: background-size .4s, background-position 0s .4s;
+}
+
+a:hover {
+  --_p: 100%;
+  transition: background-position .4s, background-size 0s;
+}
+
+a:active {
+  box-shadow: 0 0 9e9q inset #0009;
+  background-color: var(--c);
+  color: #fff;
+}
+
+a{
+  width: 68%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding:var(--paddinginput); 
+  border: none;
+  color: white;
+  border-radius: var(--borderedonde);
   text-align: center;
-  border: none;
-  border-radius:var(--borderedonde);
   text-decoration: none;
-  background-color: var(--fondoinput);
-  color: #ffff;
-  font-size: 1.2rem;
 }
-.contenedor-form button{
-  padding: var(--paddinginput);
-  border-radius:var(--borderedonde) ;
-  background-color: var(--fondoinput);
-  border: none;
-  width: 70%;
-  color: #ffff;
-  font-size: 1.2rem;
-}
-.contenedor-form i{
+
+
+
+
+
+.contenedor-form i {
   padding-left: 0.3em;
 }
-.contenedor-form button:hover{
- cursor: pointer;
- background-color: #dc6d45;
- transition: 0.5s all;
-}
-.contenedor-form a:hover{
- cursor: pointer;
- background-color: #dc6d45;
- transition: 0.5s all;
-}
+
 /* === RESPONSIVE DEL LOGIN ===*/
-@media screen and (max-width: 820px){
-  .contenedor{
-    grid-template-areas: 
-    "cont cont cont"
-    "cont cont cont"
-    "cont cont cont";
+@media screen and (max-width: 820px) {
+  .contenedor {
+    grid-template-areas:
+      "cont cont cont"
+      "cont cont cont"
+      "cont cont cont";
     height: 100vh;
   }
-  .contenedor-cont{
+
+  .contenedor-cont {
     height: 100vh;
   }
-  .contenedor-form form{
-    gap: 20px;
+
+  .contenedor-form form {
+    gap: 25px;
   }
-  .contenedor form>h1{
-     font-size: 3.5em;
-   }
-   .contenedor-form form>img{
-    width: 200px;
-    height: 200px;
+
+  .contenedor form>h1 {
+    font-size: 3em;
+  }
+
+  .contenedor-form form>img {
+    width: 170px;
+    height: 170px;
     border-radius: 50%;
   }
 }
