@@ -17,13 +17,13 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows:1fr 1fr;
   grid-template-areas: 
-  "img img cont"
-  "img img cont"
-  "img img cont";
+  "cont img img"
+  "cont img img"
+  "cont img img";
 }
 .contenedor-img{
   grid-area: img;
-  background-image: url(https://lh3.googleusercontent.com/3hjBkuVOu-sn1M8Mi0vP888jN5rFAosRSGxXcPlzg1mTQSSba7HJkxarB2GyAk-nCFLR1TVhB4pA76dbaH9yCb2PAqBIk8FLYyTfjwA1);
+  background-image: url('/img/fondo_login.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -31,9 +31,10 @@
   width: 100%;
   height: 100%;
 }
-.contenedor-cont{
+.contenedor-cont {
   grid-area: cont;
-  background-color:#222429;
+  background-color: #222429;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
 }
 .contenedor-form{
   width: 100%;
@@ -70,6 +71,16 @@
   border-radius: 10px;
   color:slategray;
 }
+.contenedor-input{
+  width: 70%;
+
+}
+input[type="submit"] {
+ background-color: #FB5B21;
+ border: none;
+ color: white;
+}
+
 .contenedor-form input:focus{
   outline-color:var(--fondoinput);
 }
@@ -93,6 +104,9 @@
   color: #ffff;
   font-size: 1.2rem;
 }
+.contenedor-form i{
+  padding-left: 0.3em;
+}
 .contenedor-form button:hover{
  cursor: pointer;
  background-color: #dc6d45;
@@ -103,8 +117,30 @@
  background-color: #dc6d45;
  transition: 0.5s all;
 }
-
-
+/* === RESPONSIVE DEL LOGIN ===*/
+@media screen and (max-width: 720px){
+  .contenedor{
+    grid-template-areas: 
+    "cont cont cont"
+    "cont cont cont"
+    "cont cont cont";
+    height: 100vh;
+  }
+  .contenedor-cont{
+    height: 100vh;
+  }
+  .contenedor-form form{
+    gap: 20px;
+  }
+  .contenedor form>h1{
+     font-size: 3.5em;
+   }
+   .contenedor-form form>img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+}
 
 
 

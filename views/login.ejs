@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Login</title>
 	<link rel="stylesheet" href="resources/css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
 <body>
@@ -25,18 +26,18 @@
 
 			<div class="contenedor-form">
 				<form action="auth" method="POST">
-					<h1>Iniciar sesion</h1>
+					<h1>Iniciar Sesion</h1>
 					<img src="https://i.pinimg.com/564x/0a/d7/ba/0ad7ba54a19cf98803f08d7265c94b6c.jpg" alt="">
-					<input type="text" name="user" id="" placeholder="Usuario" autofocus required>
-					<input type="password" name="pass" id="" placeholder="Contraseña" required>
-					<button type="submit" class="btn-login">Iniciar Sesion</button>
-					<a href="#">Registrarme</a>
+					<input type="text" name="user" placeholder="User" autofocus required autocomplete="off">
+					<input type="password" name="pass" placeholder="Password" required>
+					<input type="submit" class="btn-login" value="Login">
+					<a href="register" class="btn-register">Register</a>
 				</form>
 
 			</div>
 
 		</div>
-		
+
 		<!--CND SWEET ALERT -->
 		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
