@@ -143,7 +143,6 @@ button {
 /*===================*/
 a{
   --c: #FB5B21;
-  /* the color*/
 
   box-shadow: 0 0 0 .1em inset var(--c);
   --_g: linear-gradient(var(--c) 0 0) no-repeat;
@@ -179,10 +178,6 @@ a{
   text-align: center;
   text-decoration: none;
 }
-
-
-
-
 
 .contenedor-form i {
   padding-left: 0.3em;
